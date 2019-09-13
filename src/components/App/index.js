@@ -15,16 +15,13 @@ const App = () => {
     <Store>
       <Router>
         <div className="app-container d-flex">
-          <main>
           <Header />
             <Switch>
               {routes.map((route, i) => <Route key={i} path={route.path} component={route.component} exact={route.exact} />)}
               <Route component={NotFound} />
             </Switch>
-          </main>
-          <Sidenav />        
         </div>
-
+        <Sidenav />    
       </Router>
     </Store>
   ); 

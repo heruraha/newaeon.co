@@ -1,29 +1,39 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { CTX } from 'store';
 
 import './Sidenav.scss';
 
 const SideNav = () => {
   const [appState, dispatch] = React.useContext(CTX)
+  const handleClick = () =>   {
+    dispatch({type: 'TOGGLE_SIDENAV', payload: !appState.navOpen});
+  }
+
   return (
     <div className={'sidenav ' + (appState.navOpen ? 'show' : 'hide')}>
       <ul>
-        <li className="link">
-        <NavLink 
-          activeClassName="active"
-          to="/">
-          Home
-        </NavLink>
+        <li className="link" onClick={handleClick}>
+          <Link to="/">Home</Link>
         </li>
-        <li className="link">
-        <NavLink 
-          activeClassName="active"
-          to="/send/how">
-          Send
-        </NavLink>
+        <li className="link" onClick={handleClick}>
+          <Link to="/work">Work</Link>
+        </li>
+        <li className="link" onClick={handleClick}>
+          <Link to="/services">Services</Link>
+        </li>
+        <li className="link" onClick={handleClick}>
+          <Link to="/about">About</Link>
         </li>
       </ul>
+      
+      <button className="close-menu" onClick={handleClick}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+          <path d="M2.22-12.375l6.61-6.61,1.363-1.363a.516.516,0,0,0,0-.729L8.735-22.536a.516.516,0,0,0-.729,0L.032-14.563l-7.973-7.974a.516.516,0,0,0-.729,0l-1.459,1.459a.516.516,0,0,0,0,.729l7.974,7.974L-10.129-4.4a.516.516,0,0,0,0,.729l1.459,1.459a.516.516,0,0,0,.729,0L.032-10.187l6.61,6.61L8.006-2.214a.516.516,0,0,0,.729,0l1.459-1.459a.516.516,0,0,0,0-.729Z" transform="translate(10.28 22.687)" fill="#fff"/>
+        </svg>
+      </button>
+
+
     </div>
   )
 }

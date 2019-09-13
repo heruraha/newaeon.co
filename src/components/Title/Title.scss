@@ -1,0 +1,26 @@
+@import 'assets/scss/variables.scss';
+
+.header-title {
+    position: relative;
+    .big {
+        font-family: $font-bg;
+        color: $purple;
+        opacity: .3;
+        position: absolute;
+        bottom: 0;
+        left: -30px;
+        font-size: 13rem;
+        line-height: 13rem;
+        z-index: 0;
+    }
+    h1 {
+        font-family: $font-header;
+        color: $white;
+        font-size: 4.5rem;
+        position: relative;
+        z-index: 1;
+        span {
+            display: block;
+        }
+    }
+}
