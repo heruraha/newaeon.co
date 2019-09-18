@@ -2,10 +2,11 @@
 
 .sidenav {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   opacity: 0;
   background-color: $black;
+  //background: $black url('../../assets/img/triangle.svg') no-repeat right 100%;
   transition: .3s all;
   top: 0;
   left: 0;
@@ -14,7 +15,7 @@
     opacity: 1; 
     z-index: 9999;
   }
-  ul {
+  div.wrap {
     display: flex;
     width: 100%;
     height: 100%;
@@ -23,18 +24,46 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    li {
-      margin: 0;
+
+    ul {
+      margin: 0 0 0 0;
       padding: 0;
-      list-style: none;
-      font-size: 3rem;
-      letter-spacing: 3px;
-      //text-transform: uppercase;
+      text-align: center;
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 3rem;
+        letter-spacing: 3px;
+        //text-transform: uppercase;
+        a {
+          color: $white;
+          text-decoration: none;
+          &:hover {
+            color: $purple;
+          }
+        }
+      }
+    }
+
+    .logo-nav {
+      margin: 2rem 0 auto 0;
+    }
+
+    .social-links {
+      margin: auto 0 2rem 0;
+      display: flex;
+      width: 10vw;
+      justify-content: space-around;
       a {
-        color: $white;
-        text-decoration: none;
+        transition: .3s all;
         &:hover {
-          color: $purple;
+          svg > path {fill: $white}
+        }
+        svg {
+          transition: .3s all;
+          height: 25px;
+          width: auto;
         }
       }
     }
@@ -45,4 +74,5 @@
     right: 1rem;
     @extend .btn-transparent;
   }
+
 }

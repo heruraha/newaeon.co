@@ -5,7 +5,8 @@ const CTX = React.createContext();
 
 const initialState = {
     navOpen: false,
-    title: 'React Boiler'
+    title: 'newaeon.co',
+    activeScreen: null,
 }
 
 const Store = (props) => {

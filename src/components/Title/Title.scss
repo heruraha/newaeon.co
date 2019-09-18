@@ -2,6 +2,7 @@
 
 .header-title {
     position: relative;
+    pointer-events: none;
     .big {
         font-family: $font-bg;
         color: $purple;
@@ -12,6 +13,7 @@
         font-size: 13rem;
         line-height: 13rem;
         z-index: 0;
+        white-space: nowrap;
     }
     h1 {
         font-family: $font-header;

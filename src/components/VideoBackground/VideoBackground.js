@@ -8,9 +8,9 @@ const VideoBackground = (props) => {
         <>
             <svg id="video-bg"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920px" height="1080px" preserveAspectRatio="xMidYMid slice">
                 <g id="purple-wrap" x="0" y="0" width="1920" height="1080">
-                <g id="purple-triangle" transform="translate(1920 1080) rotate(180)">
-                    <path d="M1246.679,1079.9H.866L623.772,1Z" fill="rgba(102,55,208,0.72)"/>
-                </g>
+                    <g id="purple-triangle" transform="translate(1920 1080) rotate(180)">
+                        <path d="M1246.679,1079.9H.866L623.772,1Z" fill="rgba(102,55,208,0.72)"/>
+                    </g>
                 </g>
                 <defs>
                 <mask id="mask" x="0" y="0" width="1920" height="1080">

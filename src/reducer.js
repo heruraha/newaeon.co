@@ -5,6 +5,11 @@ const reducer = (state, action) => {
             ...state,
             navOpen: action.payload
             }
+        case 'UPDATE_ACTIVE_SCREEN':
+            return {
+            ...state,
+            activeScreen: action.payload
+            }
         default:
             throw Error('reducer error');
     }
