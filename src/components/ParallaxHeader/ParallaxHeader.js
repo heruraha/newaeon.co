@@ -13,7 +13,7 @@ const ParallaxHeader = (props) => {
     }, [setPosition]);
 
     return (
-        <div className="parallax-header-wrap" style={{ backgroundColor: props.bgColor ?`${props.bgColor}` : '#333333'}}>
+        <div className={props.tint !== false ? 'parallax-header-wrap' : 'parallax-header-wrap no-tint'} style={{ backgroundColor: props.bgColor ?`${props.bgColor}` : '#333333'}}>
             {props.img ? 
             props.img.map( (e, i) => 
                 <div 

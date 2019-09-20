@@ -8,7 +8,9 @@ import About from 'containers/About';
 import Services from 'containers/Services';
 import Work from 'containers/Work';
 import Veris from 'containers/Work/Veris';
-
+import Pledgeling from 'containers/Work/Pledgeling';
+import Noew from 'containers/Work/Noew';
+import Pif from 'containers/Work/Pif';
 import Sidenav from 'components/Sidenav/Sidenav';
 
 const routikner = [
@@ -36,7 +38,22 @@ const routikner = [
     path: "/work/veris",
     component: Veris,
     exact: true
-  }
+  },
+  {
+    path: "/work/pledgeling",
+    component: Pledgeling,
+    exact: true
+  },
+  {
+    path: "/work/noew",
+    component: Noew,
+    exact: true
+  },
+  {
+    path: "/work/pif",
+    component: Pif,
+    exact: true
+  },
 ];
 
 const Routes = () => {

@@ -24,7 +24,7 @@ const About = (props) => {
           <div className="col-md-4">
             <h4>Design Systems</h4>
             <p className="headline mt-3">
-            Defining your brand into a single cohesive system of components from start to finish, I create design systems.
+            I make design systems by creating a single choesive system of components from design to development.
             </p>
           </div>
           <div className="col-md-4">

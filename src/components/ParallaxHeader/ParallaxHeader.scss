@@ -23,5 +23,10 @@
         height: 65vh;
         width: 100%;
      }
+     &.no-tint {
+         &:after {
+             background: none !important;
+         }
+     }
 }
  

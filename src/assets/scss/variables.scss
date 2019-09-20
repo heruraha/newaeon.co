@@ -54,3 +54,12 @@ $font-bg: essonnes-display, serif;
     border: none;
     outline: none;
 }
+
+.font-header {
+    font-family: $font-header
+}
+
+.dim {
+    font-size: 20px !important;
+    opacity: .7;
+}
