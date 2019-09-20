@@ -1,9 +1,12 @@
 @import 'variables.scss';
 @import '~bootstrap/scss/bootstrap.scss';
+@import url('https://use.typekit.net/vux1efx.css');
 
 //Global Styles
 body {
   background: $body-bg;
+  font-family: $font-body;
+  color: $white;
 }
 
 h1,h2,h3,h4 {
@@ -14,11 +17,141 @@ h1,h2,h3,h4 {
   outline: none !important;
 }
 
-.app-container > main {
-  width: 100%;
+::placeholder {
+  color: $input-color-placeholder !important;
+}
+body { position: relative; }
+html{
+  &.no, &.home, &.home body {
+    overflow:hidden !important;
+  }
+  @include sm {
+    &.no { overflow: auto !important; }
+    &.home { height: 100%; }
+  }
+}
+
+#root, body {
   height: 100%;
 }
 
-::placeholder {
-  color: $input-color-placeholder !important;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &.services {
+    background: $black url('../../assets/img/triangle.svg') no-repeat;
+    background-size: 156%;
+    background-position: 200% 0;
+  }
+  // &.work {
+  //   background: $black url('../../assets/img/triangle.svg') no-repeat;
+  //   background-size: 72%;
+  //   background-position: 200% -50%;
+  // }
+}
+
+.main-body {
+  height: 100vh;
+  display: flex;
+  @include sm {
+    height: 100%;
+  }
+}
+
+a {
+  transition: .3s all;
+}
+h4 {
+  font-family: $font-btn;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+.headline {
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  color: white;
+  @include sm {
+    font-size: 1.2rem;
+  }
+}
+
+.btn {
+  font-family: $font-btn;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0;
+  height: 65px;
+  padding: 0 50px;
+  transition: .3s all;
+  &.btn-white {
+    color: white;
+    border: 2px solid white;
+    font-size: 18px;
+  }
+  &.btn-port {
+    align-items: center;
+    display:flex;
+    margin-right: 1.5rem;
+    svg {
+      margin-left: .5rem;
+    }
+  }
+  &:hover {
+    background: $purple;
+    border: $purple;
+  }
+}
+
+.bg-about {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2;
+  overflow: hidden;
+  background: url('../img/bg_about.jpg') no-repeat center center;
+  background-size: cover;
+  @include sm {
+    background-position: right center;
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+.mt-6 {
+  margin-top: 5rem;
+  @include sm { margin-top: 0rem;}
+}
+
+.container-wrap {
+  background: $black;
+  padding-bottom: 3rem
+
+}
+
+.project-description {
+  @include sm {
+    width: 100%;
+    & > .col-sm-9 {
+      margin-bottom: 2rem;
+      & > div.flex-row {
+        flex-direction: column !important;
+        .btn-port {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 1rem;
+          justify-content: center;
+        }
+      }
+    }
+  }
 }
