@@ -94,10 +94,15 @@ $screen-xl-min: 1200px; // Large desktops
 }
 
 .font-header {
-    font-family: $font-header
+    font-family: $font-header;
+    font-style: italic;
 }
 
 .dim {
     font-size: 20px !important;
     opacity: .7;
+}
+
+.z-index-3 {
+    z-index: 3;
 }

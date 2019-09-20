@@ -17,7 +17,7 @@ const MainScreen = (props) => {
     <>
     <Header props={props} />
     <div className="container main-body align-items-center justify-content-center flex-column">
-      <div className="col-sm-8 col-offset-2 d-flex flex-column align-items-center justify-content-center text-center">
+      <div className="col-sm-8 col-offset-2 d-flex flex-column align-items-center justify-content-center text-center z-index-3">
         <Title bgText="&" title="Senior Product Designer" subtitle="Front-end Developer" />
         <p className="headline mt-3">
         Based in New Orleans, I'm a hybrid designer developer that creates sleek user experiences that are intuitive, accessible, and don’t go over budget.
