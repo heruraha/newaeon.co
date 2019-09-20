@@ -3,6 +3,13 @@
 .carousel {
     border-radius: 4px;
     overflow: hidden;
+    @include sm {
+        overflow: visible;
+        .carousel-indicators {
+            bottom: -50px;
+            li { border-color: white; border-radius: 100px; background-color: white !important; }
+        }
+    }
 }
 .carousel-control-prev, .carousel-control-next {
     opacity: 0 !important;
@@ -17,3 +24,4 @@
         padding: 1rem 1.25rem;
     }
 }
+

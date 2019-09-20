@@ -16,6 +16,7 @@ const Noew = (props) => {
 
     document.title = `NOEW - Portfolio - newaeon.co`;
     document.documentElement.classList.remove('no')
+    document.documentElement.classList.remove('home')
     
     const [appState, dispatch] = React.useContext(CTX);
     useEffect( 
@@ -52,7 +53,7 @@ const Noew = (props) => {
         <div className="container align-items-start justify-content-center flex-column">
         <div className="d-flex flex-column align-items-start justify-content-start mt-6 mb-3">
             <Title bgText="NOEW" title="Design &amp; Frontend" color={'#483163'} />
-            <div className="row mt-3">
+            <div className="row mt-3 project-description">
                 <div className="col-sm-9">
                     <p className="headline">In 2016, I lead the effort to establish a new look and feel to New Orleans Entrepreneur Week, which included a complete brand and user experience overhaul optimized for mobile. Once the aesthetic was etablished, I provided high fidelity wireframes and implemented them in HTML/CSS/Javascript/PHP</p>
                     <div className="d-flex flex-row">

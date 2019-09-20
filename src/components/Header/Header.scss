@@ -29,4 +29,11 @@
             margin: 0 0 0 auto;
         }
     }
+    @include sm {
+        width: 100vw;
+        position: relative;
+        padding: 0;
+        max-height: 93px;
+        .container .logo-header { max-height: 65px; }
+    }
 }

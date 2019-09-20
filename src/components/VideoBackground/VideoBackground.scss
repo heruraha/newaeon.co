@@ -28,4 +28,5 @@ video {
     z-index: -2;
     overflow: hidden;
     opacity: 1;
+    @include sm { left: 0% }
 }

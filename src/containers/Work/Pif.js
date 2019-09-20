@@ -21,9 +21,10 @@ import e9 from 'assets/img/e-pif9.jpg';
 
 const Pif = (props) => {
 
-    document.title = `Pif - Portfolio - newaeon.co`;
+    document.title = `PIF - Portfolio - newaeon.co`;
     document.documentElement.classList.remove('no')
-    
+    document.documentElement.classList.remove('home')
+
     const [appState, dispatch] = React.useContext(CTX);
     useEffect( 
         () => dispatch({type: 'UPDATE_ACTIVE_SCREEN', payload: 'portfolio'}), [appState.activeScreen]
@@ -56,15 +57,13 @@ const Pif = (props) => {
             {src: v4, bgX: '65%', bgY: '0%', x: 0, bgSize: '35%'},
             {src: v2, bgX: '55%', bgY: '0%', x: 0, bgSize: '25%'},
             {src: v3, bgX: '35%', bgY: '50%', x: 0, bgSize: '35%'},
-        
-
         ]}/>
 
     <div className="full-width container-wrap" style={{ backgroundColor: themeColor }}>
         <div className="container align-items-start justify-content-center flex-column">
         <div className="d-flex flex-column align-items-start justify-content-start mt-6 mb-3">
             <Title bgText="Pif" title="React Native Development" color={'#ffffff'} />
-            <div className="row mt-3">
+            <div className="row mt-3 project-description">
                 <div className="col-sm-9">
                     <p className="headline">From 2017-2018, I worked on the development of Pif, a marketplace that enables businesses to be charitible through digital currency transactions fueled by p2p payments. This project was on a tight deadline and I found myself often designing in code. I used React Native to develop for both Android &amp; iOS.</p>
                     <div className="d-flex flex-row">

@@ -13,6 +13,7 @@ const About = (props) => {
 
     document.title = `Services - newaeon.co`;
     document.documentElement.classList.remove('no')
+    document.documentElement.classList.remove('home')
     const [appState, dispatch] = React.useContext(CTX);
     useEffect( () => {  dispatch({type: 'UPDATE_ACTIVE_SCREEN', payload: 'work'}) }, [appState.activeScreen]);
 

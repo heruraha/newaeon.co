@@ -16,7 +16,8 @@ const Pledgeling = (props) => {
 
     document.title = `Pledgeling - Portfolio - newaeon.co`;
     document.documentElement.classList.remove('no')
-    
+    document.documentElement.classList.remove('home')
+
     const [appState, dispatch] = React.useContext(CTX);
     useEffect( 
         () => dispatch({type: 'UPDATE_ACTIVE_SCREEN', payload: 'portfolio'}), [appState.activeScreen]
@@ -44,15 +45,15 @@ const Pledgeling = (props) => {
     <ParallaxHeader
         bgColor={themeColor}
         img={[
-            {src: v2, bgY: '50%', bgSize: '100%'},
-            {src: v1, bgX: '90%', bgY: '95%', x: 0, bgSize: '35%'}
+            {src: v2, bgY: '20%', bgSize: '100%'},
+            {src: v1, bgX: '90%', bgY: '65%', x: 0, bgSize: '35%'}
         ]}/>
 
     <div className="full-width container-wrap" style={{ backgroundColor: themeColor }}>
         <div className="container align-items-start justify-content-center flex-column">
         <div className="d-flex flex-column align-items-start justify-content-start mt-6 mb-3">
             <Title bgText="Pledgeling" title="Design &amp; Frontend" color={'#151A28'} />
-            <div className="row mt-3">
+            <div className="row mt-3 project-description">
                 <div className="col-sm-9">
                     <p className="headline">From 2014-2015, I worked with (then startup) Pledgeling to create their web and iOS apps. During my time at Zehner, I was responsible for the UI/UX design and development of these apps.</p>
                     <div className="d-flex flex-row">

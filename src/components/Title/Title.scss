@@ -25,4 +25,15 @@
             display: block;
         }
     }
+    @include md {
+        .big { 
+            font-size: 4.5rem;
+            line-height: 4.5rem;
+            left: 0;
+            bottom: .75rem;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+    }
 }

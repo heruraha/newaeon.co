@@ -28,5 +28,8 @@
              background: none !important;
          }
      }
+     @include sm {
+         height: 50vh;
+     }
 }
  

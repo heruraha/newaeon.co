@@ -25,7 +25,8 @@ const Veris = (props) => {
 
     document.title = `Veris Global - Portfolio - newaeon.co`;
     document.documentElement.classList.remove('no')
-    
+    document.documentElement.classList.remove('home')
+
     const [appState, dispatch] = React.useContext(CTX);
     useEffect( 
         () => dispatch({type: 'UPDATE_ACTIVE_SCREEN', payload: 'portfolio'}), [appState.activeScreen]
@@ -62,7 +63,7 @@ const Veris = (props) => {
         <div className="container align-items-start justify-content-center flex-column">
         <div className="d-flex flex-column align-items-start justify-content-start mt-6 mb-3">
             <Title bgText="Veris" title="Design &amp; Frontend" color={'#151A28'} />
-            <div className="row mt-3">
+            <div className="row mt-3 project-description">
                 <div className="col-sm-9">
                     <p className="headline">During 2018-2019, I contracted for Veris Global to create a cohesive design system for several of their products. This included creating a style guide, design system, and implementation in HTML/CSS/Javascript/Angular 6.</p>
                 </div>

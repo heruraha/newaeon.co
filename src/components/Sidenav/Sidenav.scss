@@ -35,7 +35,7 @@
         list-style: none;
         font-size: 3rem;
         letter-spacing: 3px;
-        //text-transform: uppercase;
+        @include sm { font-size: 2rem }
         a {
           color: $white;
           text-decoration: none;
@@ -53,19 +53,33 @@
     .social-links {
       margin: auto 0 2rem 0;
       display: flex;
-      width: 10vw;
-      justify-content: space-around;
-      a {
-        transition: .3s all;
-        &:hover {
-          svg > path {fill: $white}
-        }
-        svg {
+      flex-direction: column;
+      align-items: center;
+      .icons { 
+        width: 10vw;
+        padding: 1rem 0;
+        justify-content: space-around;
+        a {
           transition: .3s all;
-          height: 25px;
-          width: auto;
+          &:hover {
+            svg > path {fill: $white}
+          }
+          svg {
+            transition: .3s all;
+            height: 25px;
+            width: auto;
+          }
         }
+        @include sm {width: 30vw}
       }
+
+      .info {
+        letter-spacing: 1px;
+        color: $gray;
+        text-align: center;
+        padding: 0 2.5rem;
+      }
+
     }
   }
   .close-menu {
